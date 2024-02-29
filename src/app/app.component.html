@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="col">
+        <h3>{{titulo}}</h3>
+    </div>
+    <hr/>
+    <!-- form-row -> preserva na horizontal o form -->
+    <form class="form-row">
+        <div class="form-group col-md-2">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Insira o nome" class="form-control" [(ngModel)] = "nomeInput">
+
+        </div>
+        <div class="form-group col-md-2">
+            <label for="snome">Sobrenome:</label>
+            <input type="text" name="snome" id="snome" placeholder="Insira o sobrenome" class="form-control" [(ngModel)] = "snomeInput">
+        
+        <div class="col">
+            <button type="submit" (click)="agregarPessoa()" class="btn btn-primary">Cadastrar</button>
+        </div>
+        </div>
+    </form>
+<hr/>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <!-- Pessoa se refere a class criada - pessoa.model.ts
+        Pessoas se refere a variável - app-component.ts 
+        A var "i" resgata o valor da indexação de cada registro -->
+
+            <div *ngFor="let pessoa of pessoas; let i=index">
+                {{i+1}} . {{pessoa.nome}} {{pessoa.snome}}
+            </div>
+        </div>
+    </div>
+</div>

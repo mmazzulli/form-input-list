@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Listado de Personas</h1>
+      <hr>
+      <button 
+      class = "btn btn-primary" 
+      [disabled] = 'desabilitar' 
+      (click) = 'agregarPersona()'
+      >
+      Agregar Persona
+      </button>
+      <h3>{{ mensagem }}</h3>
+      <hr>
+      <app-persona></app-persona>
+      <hr>
+      <label>Titulo Personas</label>
+      <p>Exemplo#1 com chamada de método</p>
+      <input 
+      type="text" 
+      class="form-control" 
+      (input)='modificarTitulo($event)'
+      >
+      {{ titulo1 }}
+
+      <hr>
+
+      <p>Mesmo Exemplo com ngModel</p>
+
+      <input 
+      type="text" 
+      class="form-control" 
+      [(ngModel)]='titulo2'
+      />
+      {{ titulo2 }}
+
+      <hr>
+      <h3>Adicionar Profissão - Escreva no campo acima e pressione botão</h3>
+      <button 
+      class = "btn btn-primary" 
+      [disabled] = 'desabilitar' 
+      (click) = 'agregarPersona2()'
+      >
+      Agregar Profissão
+      </button>
+      <button 
+      class = "btn btn-primary" 
+      [disabled] = 'desabilitar' 
+      (click) = 'limpar()'
+      >
+      Limpar
+      </button>
+      <p *ngIf="mostrar; else semProfissao">{{ mensagem2 }} com o titulo de {{titulo2}}</p>
+      <ng-template #semProfissao>
+          <p>Nenhuma profissão adicionada.</p>
+      </ng-template>
+      
+      <hr>
+
+      <div>
+        <h4>Diretivas</h4>
+        <div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</div>
+
+
