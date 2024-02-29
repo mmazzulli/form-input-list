@@ -9,6 +9,24 @@ part of the first stage of my studies in Angular. I'm planning to
 beef up this project gradually, turning it into a solid learning 
 experience that can help out fellow students along the way.
 
+## Starting this Project
+
+From website https://nodejs.org/en/download/ 
+> Install Node
+
+Terminal: 
+> npm install -g @angular/cli@1.4.1 
+
+> unzip or clone this project to a local directory  
+
+Terminal:
+> npm install
+
+Run a local server:
+> ng serve 
+
+
+## Starting a Project from Scratch
 ## Install
 
 Global Install:
